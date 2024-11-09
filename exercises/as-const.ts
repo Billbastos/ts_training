@@ -14,6 +14,7 @@ const contactPath = rootPathAsConst('contact', 'me') // with `as const` contactP
 
 // Locking the object type with `as const`
 const arr = [1, 2, 'hello'] as const
+arr[0] = 2 // TS Error: Cannot assign to '0' because it is a read-only property
 arr.push(3) // TS Error: Property 'push' does not exist on type 'readonly [1, 2, "hello"]'
 console.log(arr[0]) // type and value === 1
 

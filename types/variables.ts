@@ -17,3 +17,8 @@ let somethingElse: boolean
 
 somethingElse = true
 somethingElse = 'true' // Error: Type '"true"' is not assignable to type 'boolean'
+
+// Regular expressions
+let myRegExp: RegExp = /foo/
+myRegExp = new RegExp('foo')
+myRegExp = 'foo' // Error: Type '"foo"' is not assignable to type 'RegExp'
